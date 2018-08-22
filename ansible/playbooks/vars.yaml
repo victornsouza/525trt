@@ -1,0 +1,12 @@
+---
+
+- name: utilizando variaveis
+  hosts: all
+  vars:
+   - username: sysadmin
+  tasks:
+   - name: criando usuario
+     user:
+      name: "{{ username }}"
+      state: present
+      shell: /bin/bash

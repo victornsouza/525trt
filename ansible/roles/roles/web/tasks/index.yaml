@@ -1,0 +1,12 @@
+---
+- name: instalando o apache e criando index
+  include: install.yaml
+  
+- name: criando a index
+  shell: echo ola mundo > /var/www/html/inex.html
+
+- name: copiuando wp-config 
+  template:
+  src: templates/wp-config
+   name: apache2
+

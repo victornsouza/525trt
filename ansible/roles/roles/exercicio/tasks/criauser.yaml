@@ -1,0 +1,14 @@
+---
+- name: criando usuarios
+  hosts: all
+  tasks:
+   - name: cria usr
+     user: 
+      name: "{{item}}"
+      shell: /bin/bash
+      state: present
+     with_items:
+       - Exercicio1
+       - Exercicio2
+       - Exercicio3
+

@@ -1,0 +1,12 @@
+---
+
+- name: criando um inventario das maquinas
+  hosts: all
+  tasks: 
+   - name: maquina centos
+     shell: " echo maquina centos >> /tmp/inventario "
+     when: ansible_os_family == "RedHat"
+
+   - name: maquina debian
+     shell: " echo maquina debian >> /tmp/inventario "
+     when: ansible_os_family == "Debian"

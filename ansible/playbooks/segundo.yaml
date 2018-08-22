@@ -1,0 +1,34 @@
+---
+- name: minha segunda playbook
+  hosts: all
+  tasks: 
+   - name: criando um usuario com meu nome
+     user: 
+      name: Victor
+      shell: /bin/bash
+      password: '$1$3S5ozP3g$00wKOqeU4zJ5QanJt9pRI1'
+      state: present
+
+   - name: criando um usuario com meu sobrenome
+     user: 
+      name: Souza
+      shell: /bin/bash
+      password: '$1$3S5ozP3g$00wKOqeU4zJ5QanJt9pRI1'
+      state: present
+
+   - name: instalando o htop
+     package:
+      name: htop
+      state: present
+
+   - name: instalando o cowsay
+     package:
+      name: cowsay
+      state: present
+
+   - name: instalando o vim
+     package:
+      name: vim
+      state: present
+
+

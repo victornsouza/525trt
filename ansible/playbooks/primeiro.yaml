@@ -1,0 +1,19 @@
+---
+- name: minha primeira playbook
+  hosts: all
+  tasks: 
+   - name: criando usuario devops
+     user: 
+      name: devops
+      shell: /bin/bash
+      password: '$1$3S5ozP3g$00wKOqeU4zJ5QanJt9pRI1'
+      state: present
+
+   - name: instalando o htop
+     package:
+      name: htop
+      state: present
+
+   - name: copiando arquivo para tmp
+     copy: src=files/devops dest=/tmp/devops
+

@@ -1,0 +1,7 @@
+---
+   - name: Repositorio redhat
+     hosts: all
+     tasks:
+      - name: Instalar rpm da internet 
+        yum:
+         name: https://yum.puppet.com/puppet5/puppet5-release-el-7.noarch.rpm

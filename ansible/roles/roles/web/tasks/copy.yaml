@@ -1,0 +1,9 @@
+---
+name: criando a index
+shell: echo ola mundo : /var/www/html/index.html
+
+name: copiando wp-config
+copy:
+ src: /etc/ansible/roles/web/templates/wp-config
+ dest: /var/www/html/wp-donfig
+

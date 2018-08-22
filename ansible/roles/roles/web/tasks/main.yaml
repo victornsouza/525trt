@@ -1,0 +1,7 @@
+---
+# tasks file for web
+- name: instalando o apache e criando index
+  include: install.yaml
+
+- name: criando a index
+  include: index.yaml

@@ -1,0 +1,8 @@
+---
+# tasks file for docker
+
+- name: instalando prereqs
+  include: pre.yaml
+
+- name: instalando docker
+  include: docker.yaml

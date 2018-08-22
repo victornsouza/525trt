@@ -1,0 +1,13 @@
+---
+   - name: Repositorio debian
+     hosts: all
+     tasks:
+      - name: Instalar deb da internet 
+        apt:
+         deb: https://apt.puppetlabs.com/puppet5-release-xenial.deb
+
+   - name: instalando puppet
+     hosts: all
+     tasks:
+      - name: Instalar server 
+        apt: puppetserver

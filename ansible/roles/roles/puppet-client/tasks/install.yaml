@@ -1,0 +1,23 @@
+---
+   - name: instalando aplicacoes
+     hosts: all
+     tasks:
+      - name: apache 
+        package:
+         name: apache2
+         state: present
+
+      - name: htop 
+        package:
+         name: htop
+         state: present
+
+      - name: vim 
+        package:
+         name: vim
+         state: present
+
+      - name: sysstat 
+        package:
+         name: sysstat
+         state: present

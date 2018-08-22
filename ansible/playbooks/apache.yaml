@@ -1,0 +1,5 @@
+---
+- name: instalando apache
+  hosts: all
+  roles:
+   - web

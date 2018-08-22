@@ -1,0 +1,30 @@
+---
+- name: minha segunda playbook
+  hosts: all
+  tasks: 
+   - name: criando um usuario com meu nome
+     user: 
+      name: "{{item}}"
+      shell: /bin/bash
+      state: present
+     with_items:
+       - Victor
+       - Nascimento
+       - Souza
+
+   - name: instalando o htop
+     package:
+      name: htop
+      state: present
+
+   - name: instalando o cowsay
+     package:
+      name: cowsay
+      state: absent
+
+   - name: instalando o vim
+     package:
+      name: vim
+      state: present
+
+

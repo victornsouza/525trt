@@ -1,0 +1,4 @@
+- name: criando o ambiente do docker
+  hosts: docker
+  roles:
+   - docker

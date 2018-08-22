@@ -1,0 +1,5 @@
+
+- name: provisionando o puppet
+  hosts: all
+  roles:
+   - puppet
